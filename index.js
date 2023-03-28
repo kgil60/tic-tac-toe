@@ -7,9 +7,6 @@ let alertDiv = $('#alert');
 let alertMessage = $('#alertMessage');
 let closeAlert = $('#closeAlert');
 
-// ENABLES GAME TO BE PLAYED
-let enable = true;
-
 // COUNTS TIMES BOARD IS CLICKED
 let count = 0
 
@@ -102,40 +99,31 @@ const checkWin = (player) => {
     let row3 = array[2];
 
     if (row1[0] === player && row1[1] === player && row1[2] === player) {
-        enable = false;
         return player;
     }
     else if (row2[0] === player && row2[1] === player && row2[2] === player) {
-        enable = false;
         return player;
     }
     else if (row3[0] === player && row3[1] === player && row3[2] === player) {
-        enable = false;
         return player;
     }
     else if (row1[0] === player && row2[0] === player && row3[0] === player) {
-        enable = false;
         return player;
     }
     else if (row1[1] === player && row2[1] === player && row3[1] === player) {
-        enable = false;
         return player;
     }
     else if (row1[2] === player && row2[2] === player && row3[2] === player) {
-        enable = false;
         return player;
     }
     else if (row1[0] === player && row2[1] === player && row3[2] === player) {
-        enable = false;
         return player;
     }
     else if (row1[2] === player && row2[1] === player && row3[0] === player) {
-        enable = false;
         return player;
     };
 
     if (count === 9) {
-        enable = false;
         return 'draw';
     }
 
@@ -145,21 +133,3 @@ const checkWin = (player) => {
 
 $(body).on('click', tableClickHandler);
 $(resetBtn).on('click', resetHandler);
-
-$(closeAlert).on('click', function() {
-    $(alertDiv).attr('style', 'display: none');
-});
-
-// END GAME CHECK
-    // get classes of each cell picked by player
-    // split at - and parse strings to int to get right array
-    // push respective letter to chosen array
-
-    // IF WIN
-        // check for each winning combo
-        // one algorithm just pass in player letter
-        // simply check if arrays have text
-    
-    // IF DRAW
-        // have count
-        // if count reaches number and no winner, draw
