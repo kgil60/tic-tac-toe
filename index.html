@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="text-center p-5">
+        <h1 class="p-5">Welcome to Tic-Tac-Toe</h1>
+        <h3 class="p-3" id="playerTurn">X - It is your turn</h3>
+        <h5>(Click on the cells to play your turn)</h5>
+    </div>
+
+    <div id="gridContainer" class="container d-flex justify-content-center pl-5 pr-5">
+        <table id="grid" class="table table-bordered border-dark" style="width: 60%">
+            <tbody>
+                <tr id="row1">
+                    <td id="1-1" class="p-5"></td>
+                    <td id="1-2" class="p-5"></td>
+                    <td id="1-3" class="p-5"></td>
+                </tr>
+                <tr id="row2">
+                    <td id="2-1" class="p-5"></td>
+                    <td id="2-2" class="p-5"></td>
+                    <td id="2-3" class="p-5"></td>
+                </tr>
+                <tr id="row3">
+                    <td id="3-1" class="p-5"></td>
+                    <td id="3-2" class="p-5"></td>
+                    <td id="3-3" class="p-5"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>
